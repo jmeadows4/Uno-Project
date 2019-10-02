@@ -3,7 +3,7 @@
 
 #Colors: Red = 0, Blue = 1, Green = 2, Yellow = 3, Black = 4
 #Special/not: special = 1, not_special = 0
-#number/skip/reverse: 1-9 for numbers, skip = 10, reverse = 11, 
+#number/skip/reverse: 1-9 for numbers, skip = 10, reverse = 11,
 
 
 
@@ -16,13 +16,10 @@ cards_read = []
 cur_person = 0
 num_cards_played = 0
 num_players = int(input("Enter the number of players for the game: "))
-counter_clockwise = True 
+counter_clockwise = True
 
 #replace 0 with the first card shown?
 last_card_played = 0
-
-last_person = num_players-1 if cur_person == 0 else cur_person - 1
-
 
 
 #could decide a way to check if the play is valid? We would need this, because if we dont have
@@ -53,7 +50,7 @@ def get_cur_player(code):
         for cur_code in list:
             if code == cur_code:
                 return i
-        i++
+        i += 1
     print("Big error: code not found in any hand")
 
 
@@ -68,31 +65,3 @@ while True:
             print("cur person = ", cur_person)
             decide_next(last_code, code)
             last_code = code
-
-
-
-
-
-
-
-
-
-
-
-#problem: if a wildcard is played, there is no way to know what color is chosen. For now,
-#maybe assume that all choices are okay
-#def is_validlast_code, cur_code, last_player_cur_player):
-
-#    #if the person is not blooding, they have more options to play
-#    if not_blooding(cur_player, last_player):
-        #if the last card is not a wild
-#        if last_code[0] != 4:
-
-
-
-
-
-
-
-
-
